@@ -11,25 +11,25 @@
     <nav class="p-6 bg-white flex justify-between">
         <ul class="flex items-center">
             <li>
-                <a href="" class="p-3">Home</a>
+                <a href="/" class="p-3">Home</a>
             </li>
             <li>
-                <a href=""  class="p-3">Dashboard</a>
+                <a href="{{ route('dashboard') }}"  class="p-3">Dashboard</a>
             </li>
             <li>
-                <a href="" class="p-3">Post</a>
+                <a href="{{ route('posts') }}" class="p-3">Post</a>
             </li>
         </ul>
 
         <ul class="flex items-center">
             @auth
                 <li>
-                    <a href="" class="p-3">Lavyne Owiti</a>
+                    <a href="" class="p-3">{{ auth()->user()->name}}</a>
                 </li>
                 <li>
-                    <form action="{{ route('logout') }}" method="post">
+                    <form action="{{ route('logout') }}" method="post" class="inline ">
                         @csrf
-                        <button type="submit" class="p-3">Logout</button>
+                        <button type="submit">Logout</button>
                     </form>
                 </li>
             
