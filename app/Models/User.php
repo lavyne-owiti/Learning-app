@@ -8,6 +8,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+use\App\Models\Post;
+use\App\Models\Like;
+
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -42,4 +46,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
+    
+    public function recievedLikes()
+    {
+        return $this->hasManyThrough(Like::class, Post::class);
+    }
 }
