@@ -4,12 +4,14 @@ This application allows registered users to make posts,likes,delete and unlike p
 
 ## Installations
 
-1.To install laravel in ubuntu.
-
-https://appdividend.com/2022/03/01/how-to-deploy-laravel-project-on-heroku/
+1.To install laravel in ubuntu. 
 
 2.To install tailwindcss in a PHP aplication
 
 3.to install laravel debugar
 
 4.To deploy laravelapplications on Heroku
+
+    https://l4webdesign.de/how-to-deploy-a-laravel-app-to-heroku/
+
+    https://appdividend.com/2022/03/01/how-to-deploy-laravel-project-on-heroku/
