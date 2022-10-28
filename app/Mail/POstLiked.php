@@ -37,6 +37,6 @@ class POstLiked extends Mailable
     public function build()
     {
         return $this->markdown('emails.posts.post_liked')
-        ->subject('SOmeone liked your post');
+        ->subject('Someone liked your post');
     }
 }
